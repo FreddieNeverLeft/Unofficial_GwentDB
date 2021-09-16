@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="816.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+   <children>
+      <Pane layoutY="26.0" prefHeight="122.0" prefWidth="1063.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <HBox layoutX="37.0" layoutY="86.0" prefHeight="25.0" prefWidth="274.0">
+               <children>
+                  <ToggleButton fx:id="provAll" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="provisionSelect" />
+                     </toggleGroup></ToggleButton>
+                  <ToggleButton fx:id="provFour" mnemonicParsing="false" text="4" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provFive" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="5" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provSix" layoutX="48.0" layoutY="10.0" mnemonicParsing="false" text="6" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provSeven" layoutX="86.0" layoutY="10.0" mnemonicParsing="false" text="7" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provEight" layoutX="124.0" layoutY="10.0" mnemonicParsing="false" text="8" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provNine" layoutX="162.0" layoutY="10.0" mnemonicParsing="false" text="9" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provTen" layoutX="200.0" layoutY="10.0" mnemonicParsing="false" text="10" toggleGroup="$provisionSelect" />
+                  <ToggleButton fx:id="provEleven" layoutX="148.0" layoutY="10.0" mnemonicParsing="false" text="11+" toggleGroup="$provisionSelect" />
+               </children>
+            </HBox>
+            <Label layoutX="38.0" layoutY="65.0" text="Provision" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameSearch" layoutX="801.0" layoutY="24.0" prefHeight="21.0" prefWidth="175.0" promptText="search (by name)" style="-fx-border-color: #000000; -fx-background-color: #cccccc; -fx-border-radius: 2em;">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </TextField>
+            <HBox layoutX="801.0" layoutY="86.0" prefHeight="25.0" prefWidth="175.0">
+               <children>
+                  <ToggleButton fx:id="rarityAll" mnemonicParsing="false" selected="true" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="raritySelect" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="rarityLegn" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" textFill="#d08411" toggleGroup="$raritySelect">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/RarityLegnd.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="rarityEpic" layoutX="114.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" textFill="#7a21b9" toggleGroup="$raritySelect">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/RarityEpic.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="rarityRare" layoutX="138.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" textFill="#0c50c6" toggleGroup="$raritySelect">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/RarityRare.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="rarityComm" layoutX="80.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" textFill="#757575" toggleGroup="$raritySelect">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/RarityCommon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+               </children></HBox>
+            <Label layoutX="801.0" layoutY="65.0" text="Rarity" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="348.0" layoutY="86.0" prefHeight="25.0" prefWidth="133.0">
+               <children>
+                  <ToggleButton fx:id="colorAll" mnemonicParsing="false" selected="true" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="colorSelect" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="colorGold" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Gold" toggleGroup="$colorSelect" />
+                  <ToggleButton fx:id="colorBronze" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" text="Bronze" toggleGroup="$colorSelect" />
+               </children>
+            </HBox>
+            <Label layoutX="348.0" layoutY="64.0" text="Cards Color" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="566.0" layoutY="65.0" text="Cards Type" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="38.0" layoutY="20.0" prefHeight="25.0" prefWidth="286.0">
+               <children>
+                  <ToggleButton fx:id="factionAll" layoutX="200.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" selected="true" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="factionSelect" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionMO" layoutX="239.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionMO.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionNG" layoutX="264.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionNG.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionNR" layoutX="267.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionNR.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionSK" layoutX="191.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionSK.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionST" layoutX="221.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionST.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton fx:id="factionSY" layoutX="160.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionSY.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></ToggleButton>
+                  <ToggleButton fx:id="factionNeutral" layoutX="40.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="32.0" toggleGroup="$factionSelect">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/FactionNeutral.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></ToggleButton>
+               </children>
+            </HBox>
+            <Label layoutX="37.0" layoutY="3.0" text="Faction" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="566.0" layoutY="86.0" prefHeight="25.0" prefWidth="213.0">
+               <children>
+                  <ToggleButton fx:id="typeAll" mnemonicParsing="false" selected="true" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeSelect" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="typeSpec" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Special" toggleGroup="$typeSelect" />
+                  <ToggleButton fx:id="typeArti" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" text="Artifact" toggleGroup="$typeSelect" />
+                  <ToggleButton fx:id="typeUnit" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" text="Unit" toggleGroup="$typeSelect" />
+               </children>
+            </HBox>
+            <TextField fx:id="nameText" layoutX="435.0" layoutY="23.0" prefHeight="25.0" prefWidth="238.0" text="Untitiled" />
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="952.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/icons8_Search_52px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="435.0" layoutY="6.0" text="Deck Name" textFill="#726f6f">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="319.0" prefHeight="497.0" prefWidth="286.0">
+         <content>
+            <VBox fx:id="finalDeck" prefHeight="493.0" prefWidth="285.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane fx:id="cardLibraryScroll" hbarPolicy="NEVER" layoutX="286.0" layoutY="148.0" prefHeight="667.0" prefWidth="777.0" stylesheets="@style.css">
+         <content>
+            <TilePane fx:id="cardLibrary" hgap="10.0" prefColumns="4" prefHeight="666.0" prefRows="0" prefWidth="762.0" vgap="10.0" />
+         </content></ScrollPane>
+      <Pane layoutY="148.0" prefHeight="171.0" prefWidth="286.0">
+         <children>
+            <ImageView fx:id="leaderView" fitHeight="171.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="154.0" layoutY="43.0" prefHeight="33.0" prefWidth="38.0" text="Cards:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="55.0" prefHeight="18.0" prefWidth="20.0" text="25">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="-80.0" layoutX="341.0" layoutY="59.0" opacity="0.5" rotate="90.0" startX="-100.0" />
+            <Label fx:id="minCardCounter" alignment="CENTER_RIGHT" layoutX="223.0" layoutY="46.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="RIGHT" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="39.0" prefHeight="19.0" prefWidth="30.0" text="MIN" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="190.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/Card.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="maxProvision" layoutX="253.0" layoutY="95.0" prefHeight="18.0" prefWidth="30.0" text="150">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="-80.0" layoutX="341.0" layoutY="99.0" opacity="0.5" rotate="90.0" startX="-100.0" />
+            <Label fx:id="maxProvisionCounter" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="215.0" layoutY="86.0" prefHeight="26.0" prefWidth="33.0" text="0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="79.0" prefHeight="19.0" prefWidth="30.0" text="MAX" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="191.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/Provision.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="253.0" layoutY="135.0" prefHeight="18.0" prefWidth="20.0" text="13">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="-80.0" layoutX="341.0" layoutY="139.0" opacity="0.5" rotate="90.0" startX="-100.0" />
+            <Label fx:id="minUnitCounter" alignment="CENTER_RIGHT" layoutX="223.0" layoutY="126.0" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="RIGHT" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="119.0" prefHeight="19.0" prefWidth="30.0" text="MIN" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="191.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/Unit.png" />
+               </image></ImageView>
+            <Label fx:id="leaderNameText" layoutX="147.0" layoutY="4.0" prefHeight="33.0" prefWidth="133.0" text="Please Select a leader" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="83.0" prefHeight="33.0" prefWidth="62.0" text="Provision:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="158.0" layoutY="123.0" prefHeight="33.0" prefWidth="38.0" text="Units:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="1063.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Menu">
+            <items>
+              <MenuItem fx:id="newMenu" mnemonicParsing="false" text="New" />
+                  <MenuItem fx:id="loadMenu" mnemonicParsing="false" text="Load" />
+                  <MenuItem fx:id="saveMenu" mnemonicParsing="false" text="Save" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

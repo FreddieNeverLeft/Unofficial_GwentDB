@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoadingScreen">
+   <children>
+      <ProgressBar layoutX="200.0" layoutY="350.0" prefWidth="200.0" />
+      <ImageView fitHeight="314.0" fitWidth="600.0" layoutX="47.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/Gwent_logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="161.0" layoutY="315.0" lineSpacing="1.0" prefHeight="27.0" prefWidth="278.0" style="-fx-background-color: transparent;" text="THE UNOFFICIAL DECK BUILDER" textFill="#50ae8f" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
