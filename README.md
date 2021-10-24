@@ -1,2 +1,2 @@
 # Unofficial_GwentDB
-Unofficial Gwent Deck Builder
+Unofficial Gwent Deck Builder for V5.2
